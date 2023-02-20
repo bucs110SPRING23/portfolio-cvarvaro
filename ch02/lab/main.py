@@ -8,7 +8,10 @@ turtle1 = turtle.Turtle()
 turtle2 = turtle.Turtle()
 
 turtle1.penup()
+turtle1.speed(1)
+
 turtle2.penup()
+turtle2.speed(1)
 
 turtle1.goto(100,20)
 turtle2.goto(100,-20)
@@ -20,8 +23,6 @@ pygame.time.wait(100)
 
 turtle1.goto(100,20)
 turtle2.goto(100,-20)
-turtle1.pendown()
-turtle2.pendown()
 
 for i in range(10):
     turtle1.goto(turtle.xcor()+ random.randrange(1, 11),20)
