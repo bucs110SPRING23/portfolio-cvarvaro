@@ -30,7 +30,7 @@
 
 # not - negation
 
-num = int(input("Num: "))
+# num = int(input("Num: "))
 # for i in range(3):
 #     if num % 3 == 0:
 #         print("fizz")
@@ -40,3 +40,38 @@ num = int(input("Num: "))
 #         print("fizzbuzz")
 # for i in range(num + 1):
 #     if i % 3 == 0
+import random
+import pygame
+pygame.init()
+screen = pygame.display.set_mode()
+colors = ["red", "green", "blue", "yellow"]
+random.shuffle(colors)
+for color in colors:
+    screen.fill(color)
+    pygame.display.flip()
+    pygame.time.wait(1000)
+    
+    screen.fill("black")
+    pygame.display.flip()
+    pygame.time.wait(250)
+
+message = """
+    Simon says:
+    UP: RED
+    DOWN: BLUE
+    LEFT: GREEN
+    RIGHT: YELLOW
+    
+    click on the window, enter a sequence, m then press enter
+    """
+
+response = input(message)
+
+for event in pygame.event.get():
+    if event.type == pygame.KEYDOWN:
+        if event.key == pygame.K_UP:
+            print("UP")
+        elif event.key == pygame.K_DOWN:
+            print("DOWN")
+        elif event.key == pygame.K_LEFT:
+            print("LEFT") 
