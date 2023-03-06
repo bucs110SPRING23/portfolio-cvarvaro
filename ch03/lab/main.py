@@ -44,5 +44,3 @@ for i in range(10):
         pygame.time.wait(1000)
 
     #2 seconds pause before ending the program. Increase if needed.
-
-  

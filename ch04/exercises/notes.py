@@ -60,3 +60,5 @@ print(mynums)
 # - key/value pairs
 # - keys must be unique
 # - keys must be immutable
+
+mytuple = (5, 8, 1, 123456789, 5)
