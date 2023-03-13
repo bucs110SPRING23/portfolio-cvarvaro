@@ -22,12 +22,6 @@ while 1:
   center = (screen_size_variable[0] // 2, screen_size_variable[1] // 2)
 
   
-
-
-
-
-
-  
   vertical_line_start = (300,600)
   vertical_line_end = (300,0)
   horizontal_line_start = (0,300)
