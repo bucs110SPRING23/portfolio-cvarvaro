@@ -26,6 +26,8 @@ def draw_building_outline(base, height):
         building.left(angle)
     building.end_fill()
     building.penup()
+    return base
+    return height
 
 def draw_windows(base, height):
     '''
@@ -49,6 +51,8 @@ def draw_windows(base, height):
         building.penup()
         building.goto(base, y_coordinate_start)
         building.end_fill()
+    return base
+    return height
 
 def draw_door(base, height):
     '''
@@ -67,6 +71,8 @@ def draw_door(base, height):
     building.right(angle)
     building.forward(height)
     building.end_fill()
+    return base
+    return height
 
 def main():
     draw_building_outline(200,400)
