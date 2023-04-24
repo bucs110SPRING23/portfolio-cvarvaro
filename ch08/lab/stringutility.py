@@ -8,33 +8,33 @@ class StringUtility:
     def __str__(self):
         return self.string
     
-    def vowels(self, s):
-        count = sum(1 for c in s if c.lower() in 'aeiou')
+    def vowels(self):
+        count = sum(1 for c in self.string if c.lower() in 'aeiou')
         if count < 5:
             return str(count)
         else:
             return 'many'
         
-    def bothEnds(self, s):
-        if len(s) <= 2:
+    def bothEnds(self):
+        if len(self.string) <= 2:
             return ''
         else:
-            return s[:2] + s[-2:]
+            return self.string[:2] + self.string[-2:]
         
-    def fixStart(self, s):
-        if len(s) <= 1:
-            return s
+    def fixStart(self):
+        if len(self.string) <= 1:
+            return self.string
         else:
-            return s[0] + s[1:].replace(s[0], '*')
+            return self.string[0] + self.string[1:].replace(self.string[0], '*')
         
-    def asciiSum(self, s):
-        return sum(ord(c) for c in s)
+    def asciiSum(self):
+        return sum(ord(c) for c in self.string)
     
-    def cipher(self, s):
+    def cipher(self):
         result = ''
-        for c in s:
+        for c in self.string:
             if c.isalpha():
-                shift = len(s)
+                shift = len(self.string)
                 if c.isupper():
                     base = ord('A')
                 else:
@@ -43,3 +43,4 @@ class StringUtility:
             else:
                 result += c
         return result
+    
