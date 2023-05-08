@@ -76,6 +76,7 @@ def main():
         print("Make your selection: ")
         for i, p in enumerate(possibles):
             print(f"{i}) {p}")
+
 main()
 
 
